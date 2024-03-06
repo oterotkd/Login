@@ -153,5 +153,9 @@ public class GestorBD {
             return false;
         }
     }
+    /*Metodo Cambiar Contraseña
+    con este metodo el usuario una vez registrado, puede cambiar su contraseña*/
+    
+    
 
 }
