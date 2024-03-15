@@ -26,7 +26,7 @@ public class GestorBD {
     ResultSet usuaResSet;
     Usuario usuarioHallado;
     int cc, tele;
-    String nom, apell, Email, contra,nue_contra;
+    String nom, apell, Email, contra;
 
     public boolean registrar(int cedula, String nombre, String apellido, int telefono, String email, String contraseña) {
         Connection conn;
@@ -81,9 +81,8 @@ public class GestorBD {
                 tele = usuaResSet.getInt("telefono");
                 Email = usuaResSet.getString("email");
                 contra = usuaResSet.getString("contraseña");
-                nue_contra=usuaResSet.getString("Nuev_Contra");
-
-                usuarioHallado = new Usuario(cc, nom, apell, tele, Email, contra,nue_contra);
+               
+                usuarioHallado = new Usuario(cc, nom, apell, tele, Email, contra);
 
                 ConectaBD.cerrar();
                 return usuarioHallado;
@@ -118,7 +117,7 @@ public class GestorBD {
                     tele = usuaResSet.getInt("telefono");
                     Email = usuaResSet.getString("email");
                     contra = usuaResSet.getString("contraseña");
-                    usuarioHallado = new Usuario(cc, nom, apell, tele, Email, contra,nue_contra);
+                    usuarioHallado = new Usuario(cc, nom, apell, tele, Email, contra);
 
                     usuarios.add(usuarioHallado);
                 } while (usuaResSet.next());
@@ -156,29 +155,4 @@ public class GestorBD {
     }
     /*Metodo Cambiar Contraseña
     con este metodo el usuario una vez registrado, puede cambiar su contraseña*/
-    public Usuario Cambiar( String contraseña,String Nueva_Contraseña) {
-        
-        Connection conn;
-        Statement stm;
-        ResultSet rs;
-        int resultUpdate = 0;
-        try {
-            conn = ConectaBD.abrir();
-            stm = conn.createStatement();
-            resultUpdate = stm.executeUpdate("UPDATE usuario SET (contraseña='" + Nueva_Contraseña + "' WHERE contraseña='" +contraseña + "' );");
-            if (resultUpdate != 0) {
-                ConectaBD.cerrar();
-                return null;
-            } else {
-                ConectaBD.cerrar();
-                return null;
-            }
-        } catch (Exception e) {
-            System.out.println("Error en la base de datos");
-            e.printStackTrace();
-            return null;
-        }
-    }
-    
-
 }
