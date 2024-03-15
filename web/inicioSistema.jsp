@@ -75,7 +75,9 @@
         <title>Iniciode Sistema</title>
     </head>
     <body>
-        <%@page import="Model.Usuario" %>
+        <%@page import="Controller.login" %>
+        <%@page import="Controller.registro" %>
+        <%@page import="Controller.CambioContraseña" %>
         <%/*La pagina noEncontrado.jsp, desplega un mensaje de error indicando que no se encontro
              el elemento buscado. La pagina resultadoConsulta.jsp, desplega el elemento encontrado y 
              recibe en un scriptlet el objecto Producto y  se u tilizan  las expresiones:
@@ -103,8 +105,7 @@
         <div id="header">
             <h1>Titulo Uno</h1>
             <h2>Titulo Dos</h2>
-            <a class="boton"href="muestraUsuario">Listar usuarios</a>
-
+            <a class="boton"href="cambioContraseña.jsp">Cambiar Contraseña</a>
         </div>
         <!--Contenido-->
         <div class="contenido">

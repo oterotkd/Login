@@ -13,17 +13,19 @@ public class Usuario {
     private long Telefono; 
     private String Email;
     private String Contraseña;
+    private String Nueva_Contraseña;
 
     public Usuario() {
     }
 
-    public Usuario(int Cedula, String Nombre, String Apellido,long Telefono, String Email, String Contraseña) {
+    public Usuario(int Cedula, String Nombre, String Apellido,long Telefono, String Email, String Contraseña, String Nueva_Contraseña) {
         this.Cedula = Cedula;
         this.Nombre = Nombre;
         this.Apellido = Apellido;
         this.Telefono = Telefono;
         this.Email = Email;
         this.Contraseña = Contraseña;
+        this.Nueva_Contraseña= Nueva_Contraseña;
     }
 
     public int getCedula() {
@@ -73,7 +75,13 @@ public class Usuario {
     public void setContraseña(String Contraseña) {
         this.Contraseña = Contraseña;
     }
+  public String getNueva_Contraseña() {
+        return Nueva_Contraseña;
+    }
 
+    public void setNueva_Contraseña(String Nueva_Contraseña) {
+        this.Nueva_Contraseña = Nueva_Contraseña;
+    }
    
 
    

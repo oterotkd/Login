@@ -16,6 +16,10 @@
         <servlet-name>muestraUsuario</servlet-name>
         <servlet-class>Controller.muestraUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CambioContraseña</servlet-name>
+        <servlet-class>Controller.CambioContraseña</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>borraUsuario</servlet-name>
         <url-pattern>/borraUsuario</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>muestraUsuario</servlet-name>
         <url-pattern>/muestraUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CambioContraseña</servlet-name>
+        <url-pattern>/CambioContrase_a</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

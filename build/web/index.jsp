@@ -20,6 +20,7 @@
     <body>
         <%@page import="Controller.login" %>
         <%@page import="Controller.registro" %>
+        <%@page import="Controller.CambioContraseña" %>
         <!--PRIMER CONTENEDOR-->
         <!--Añadimos este contenedor con la clase container-form y la clase sing up donde va  a estar el formulario-->
 
